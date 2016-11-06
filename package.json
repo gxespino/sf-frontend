@@ -1,0 +1,32 @@
+{
+  "name": "sf_frontend",
+  "version": "1.0.0",
+  "description": "Smarter Flips React Front End",
+  "private": true,
+  "scripts": {
+    "build": "nwb build-react-app",
+    "clean": "nwb clean-app",
+    "start": "nwb serve-react-app",
+    "test": "nwb test",
+    "test:coverage": "nwb test --coverage",
+    "test:watch": "nwb test --server"
+  },
+  "dependencies": {
+    "history": "4.2.0",
+    "re-base": "2.2.0",
+    "react": "15.3.2",
+    "react-addons-css-transition-group": "15.3.2",
+    "react-dom": "15.3.2",
+    "react-router": "4.0.0-alpha.3"
+  },
+  "devDependencies": {
+    "nwb": "0.12.x",
+    "autoprefixer-stylus": "0.10.0",
+    "concurrently": "3.0.0",
+    "react-scripts": "0.6.1",
+    "stylus": "0.54.5"
+  },
+  "author": "Glenn Espinosa",
+  "license": "MIT",
+  "repository": ""
+}
