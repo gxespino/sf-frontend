@@ -9,9 +9,9 @@ import Login from './components/Login'
 import Signup from './components/Signup'
 
 // Styles
-import './css/webflow.css'
-import './css/App.css'
-import './css/normalize.css'
+import './assets/css/webflow.css'
+import './assets/css/App.css'
+import './assets/css/normalize.css'
 
 // Router
 const Root = () => {

@@ -22,7 +22,7 @@ class Features extends React.Component {
             </div>
             <div className="w-col w-col-6 w-col-stack">
               <div>
-                <img className="private-talent-image" sizes="(max-width: 767px) 100vw, (max-width: 991px) 514px, 460px" src={require("../../images/wlecome-talent-pool.png")} width="514"></img>
+                <img className="private-talent-image" sizes="(max-width: 767px) 100vw, (max-width: 991px) 514px, 460px" src={require("../../assets/images/wlecome-talent-pool.png")} width="514"></img>
               </div>
             </div>
           </div>
@@ -33,7 +33,7 @@ class Features extends React.Component {
           <div className="w-row">
             <div className="w-col w-col-6 w-col-stack">
               <div>
-                <img className="enterprise-tools-image" sizes="(max-width: 767px) 100vw, (max-width: 991px) 488px, 460px" src={require("../../images/welcome-enterprise-tools.png")} width="488"></img>
+                <img className="enterprise-tools-image" sizes="(max-width: 767px) 100vw, (max-width: 991px) 488px, 460px" src={require("../../assets/images/welcome-enterprise-tools.png")} width="488"></img>
               </div>
             </div>
             <div className="w-col w-col-6 w-col-stack">

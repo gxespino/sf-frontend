@@ -63,7 +63,7 @@ class Signup extends React.Component {
                 <div className="testimonials-div">
                   <div className="benefit-group">
                     <div className="benefit-icon">
-                      <img src={require("../images/contract.svg")} width="60"></img>
+                      <img src={require("../assets/images/contract.svg")} width="60"></img>
                     </div>
                     <div className="benefit-blurb">
                       <p className="paragraph-small">Get in depth investment analysis
@@ -72,7 +72,7 @@ class Signup extends React.Component {
                   </div>
                   <div className="benefit-group">
                     <div className="benefit-icon">
-                      <img src={require("../images/check.svg")} width="60"></img>
+                      <img src={require("../assets/images/check.svg")} width="60"></img>
                     </div>
                     <div className="benefit-blurb">
                       <p className="paragraph-small">Generate &amp; send professional
@@ -83,7 +83,7 @@ class Signup extends React.Component {
                     <p className="testimonial-paragraph">I analyzed a handful of potential flips this morning and already made offers on the best ones. Awesome experience!</p>
                   </div>
                   <div className="testimonial-author w-clearfix">
-                    <img className="testimonial-avatar" src={require("../images/avatar.jpg")} width="40"></img>
+                    <img className="testimonial-avatar" src={require("../assets/images/avatar.jpg")} width="40"></img>
                     <p className="testimonial-author-text">Glenn Espinosa, Alexandria, VA</p>
                   </div>
                 </div>

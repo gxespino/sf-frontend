@@ -1,4 +1,5 @@
 import React from 'react'
+import base from '../base';
 
 class App extends React.Component {
   render() {
