@@ -1,22 +1,18 @@
 import React from 'react'
 
 // Components
-import TopNav from './TopNav'
-import Header from './Header'
-import Features from './Features'
+import TopNav    from '../shared/TopNav'
+import Header    from './Header'
+import Features  from './Features'
 import BottomNav from './BottomNav'
-import Promo from './Promo'
-import Footer from './Footer'
-
-// Styles
-import '../../css/webflow.css'
-import '../../css/Landing.css'
+import Promo     from './Promo'
+import Footer    from '../shared/Footer'
 
 class Landing extends React.Component {
   render() {
     return (
       <div>
-        <TopNav />
+        <TopNav linkText='Login' linkAddr='/login' />
         <Header />
         <Features />
         <BottomNav />
