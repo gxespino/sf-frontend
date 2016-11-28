@@ -12,7 +12,6 @@ class Landing extends React.Component {
   render() {
     return (
       <div>
-        <TopNav linkText='Login' linkAddr='/login' />
         <Header />
         <Features />
         <BottomNav />

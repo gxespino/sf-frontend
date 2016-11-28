@@ -1,31 +1,13 @@
 import React from 'react'
-import { render } from 'react-dom'
-import { BrowserRouter, Match, Miss } from 'react-router'
+import { render } from 'react-dom';
 
 // Components
 import App from './components/App'
-import Landing from './components/landing/Landing'
-import Login from './components/Login'
-import Signup from './components/Signup'
 
 // Styles
 import './assets/css/webflow.css'
 import './assets/css/App.css'
 import './assets/css/normalize.css'
 
-// Router
-const Root = () => {
-  return (
-    <BrowserRouter>
-      <div>
-        <Match exactly pattern='/' component={ Landing } />
-        <Match exactly pattern='/login' component={ Login } />
-        <Match exactly pattern='/signup' component={ Signup } />
-        <Miss component={ Login } />
-      </div>
-    </BrowserRouter>
-  )
-}
-
 // Mounting Point
-render(<Root/>, document.querySelector('#main'));
+render(<App />, document.querySelector('#main'));

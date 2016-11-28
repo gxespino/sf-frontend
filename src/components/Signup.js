@@ -8,7 +8,6 @@ class Signup extends React.Component {
   render() {
     return (
       <div>
-        <TopNav linkText='log in' linkAddr='/login' />
         <div className="sign-up-section">
           <div className="sign-up-header-container w-container">
             <div className="sign-up-header">
