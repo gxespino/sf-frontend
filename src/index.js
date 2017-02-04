@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from 'react-dom';
 
 // Components
-import App from './components/App'
+import { App } from './components/App'
 
 // Styles
 import './assets/css/webflow.css'

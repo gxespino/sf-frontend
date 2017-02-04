@@ -1,6 +1,6 @@
 import React from 'react'
 
-class BottomNav extends React.Component {
+export class BottomNav extends React.Component {
   render() {
     return (
       <div>
@@ -33,5 +33,3 @@ class BottomNav extends React.Component {
     )
   }
 }
-
-export default BottomNav

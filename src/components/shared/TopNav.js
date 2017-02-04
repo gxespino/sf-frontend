@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-const TopNav = (props) => {
+export const TopNav = (props) => {
   return (
     <div>
       <div className="fixed-page-nav navigation w-clearfix">
@@ -21,5 +21,3 @@ const TopNav = (props) => {
     </div>
   )
 }
-
-export default TopNav

@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Promo extends React.Component {
+export class Promo extends React.Component {
   render() {
     return (
       <div>
@@ -20,5 +20,3 @@ class Promo extends React.Component {
     )
   }
 }
-
-export default Promo

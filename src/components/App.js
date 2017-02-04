@@ -9,11 +9,11 @@ import { logout }       from '../helpers/auth'
 import { firebaseAuth } from '../config/constants'
 
 // Components
-import Landing   from './landing/Landing'
-import TopNav    from './shared/TopNav'
-import Login     from './Login'
-import Signup    from './Signup'
-import Dashboard from './protected/Dashboard'
+import { Landing }   from './landing/Landing'
+import { TopNav }    from './shared/TopNav'
+import { Login }     from './Login'
+import { Signup }    from './Signup'
+import { Dashboard } from './protected/Dashboard'
 
 function MatchWhenAuthed ({component: Component, authed, ...rest}) {
   return (
@@ -38,7 +38,7 @@ function MatchWhenUnauthed ({component: Component, authed, ...rest}) {
 }
 
 // AuthRouter
-class App extends React.Component {
+export class App extends React.Component {
   state = {
     authed: false,
     loading: true,
@@ -100,9 +100,6 @@ class App extends React.Component {
     )
   }
 }
-
-export default App
-
 
 
 

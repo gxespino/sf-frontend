@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Features extends React.Component {
+export class Features extends React.Component {
   render() {
     return (
       <div>
@@ -58,5 +58,3 @@ class Features extends React.Component {
     )
   }
 }
-
-export default Features

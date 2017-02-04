@@ -1,10 +1,10 @@
 import React from 'react'
 
 // Components
-import TopNav from './shared/TopNav'
-import Footer from './shared/Footer'
+import { TopNav } from './shared/TopNav'
+import { Footer } from './shared/Footer'
 
-class Login extends React.Component {
+export class Login extends React.Component {
   render() {
     return (
       <div>
@@ -54,5 +54,3 @@ class Login extends React.Component {
     )
   }
 }
-
-export default Login
