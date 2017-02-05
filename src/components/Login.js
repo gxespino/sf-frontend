@@ -50,6 +50,7 @@ export class Login extends React.Component {
                     </div>
                     <input className="button sign-in-button w-button" data-wait="Please wait..." type="submit" value="Sign in"></input>
                   </form>
+
                 </div>
               </div>
 

@@ -1,6 +1,14 @@
 import React from 'react'
 
 export class Footer extends React.Component {
+  footerLink = (linkText, linkAddress) => {
+    return (
+      <li className="footer-link">
+        <a className="footer-li-link" href={linkAddress}>{linkText}</a>
+      </li>
+    )
+  }
+
   render() {
     return (
       <div>
@@ -12,18 +20,10 @@ export class Footer extends React.Component {
                   <div className="footer-links-column">
                     <a className="footer-header-link" href="#">Products &amp; Tools</a>
                     <ul className="footer-links-list w-list-unstyled">
-                      <li className="footer-link">
-                        <a className="footer-li-link" href="#">analyzers</a>
-                      </li>
-                      <li className="footer-link">
-                        <a className="footer-li-link" href="#">estimators</a>
-                      </li>
-                      <li className="footer-link">
-                        <a href="#" className="footer-li-link">reports</a>
-                      </li>
-                      <li className="footer-link">
-                        <a href="#" className="footer-li-link">presentations</a>
-                      </li>
+                      {this.footerLink('analyzers', '#')}
+                      {this.footerLink('estimators', '#')}
+                      {this.footerLink('reports', '#')}
+                      {this.footerLink('presentations', '#')}
                     </ul>
                   </div>
                 </div>
@@ -31,15 +31,9 @@ export class Footer extends React.Component {
                   <div className="footer-links-column">
                     <a className="footer-header-link" href="#">Company</a>
                     <ul className="footer-links-list w-list-unstyled">
-                      <li className="footer-link">
-                        <a href="#" className="footer-li-link">About us</a>
-                      </li>
-                      <li className="footer-link">
-                        <a href="#" className="footer-li-link">Blog</a>
-                      </li>
-                      <li className="footer-link">
-                        <a href="#" className="footer-li-link">FAQ</a>
-                      </li>
+                      {this.footerLink('about us', '#')}
+                      {this.footerLink('blog', '#')}
+                      {this.footerLink('faq', '#')}
                     </ul>
                   </div>
                 </div>
