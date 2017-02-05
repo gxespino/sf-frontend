@@ -39,12 +39,16 @@ function MatchWhenUnauthed ({component: Component, authed, ...rest}) {
 
 // AuthRouter
 export class App extends React.Component {
-  state = {
-    authed: false,
-    loading: true,
+  constructor() {
+    super()
+
+    this.state = {
+      authed: false,
+      loading: true,
+    }
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.removeListener = firebaseAuth().onAuthStateChanged((user) => {
       if (user) {
         this.setState({
@@ -59,7 +63,7 @@ export class App extends React.Component {
     })
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     this.removeListener()
   }
 
@@ -68,30 +72,30 @@ export class App extends React.Component {
       <BrowserRouter>
         {({router}) => (
           <div>
-            <TopNav authed={ this.state.authed } linkText='Login' linkAddr='/login' />
+            <TopNav authed={this.state.authed} linkText='Login' linkAddr='/login' />
 
             <div className="container">
               <div className="row">
                 <Match
                   pattern='/'
-                  exactly component={ Landing }
+                  exactly component={Landing}
                 />
                 <MatchWhenUnauthed
-                  authed={ this.state.authed }
+                  authed={this.state.authed}
                   pattern='/login'
-                  component={ Login }
+                  component={Login}
                 />
                 <MatchWhenUnauthed
-                  authed={ this.state.authed }
+                  authed={this.state.authed}
                   pattern='/signup'
-                  component={ Signup }
+                  component={Signup}
                 />
                 <MatchWhenAuthed
-                  authed={ this.state.authed }
+                  authed={this.state.authed}
                   pattern='/dashboard'
-                  component={ Dashboard }
+                  component={Dashboard}
                 />
-                <Miss component={ Landing } />
+                <Miss component={Landing} />
               </div>
             </div>
           </div>

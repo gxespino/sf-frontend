@@ -4,7 +4,31 @@ import React from 'react'
 import { TopNav } from './shared/TopNav'
 import { Footer } from './shared/Footer'
 
+// Functions
+import { login } from '../helpers/auth'
+
 export class Login extends React.Component {
+  handleSubmit = (e) => {
+    e.preventDefault()
+    const email = e.currentTarget.email.value
+    const pw = e.currentTarget.password.value
+
+    login(email, pw)
+  }
+
+  resetLinks = () => {
+    return (
+      <div className="reset-log-in-links">
+        <a className="reset-link-block w-inline-block" href="#">
+          <div className="reset-link">Reset Password</div>
+        </a>
+        <a className="reset-link-block w-inline-block" href="#">
+          <div className="reset-link">Resend Verification Email</div>
+        </a>
+      </div>
+    )
+  }
+
   render() {
     return (
       <div>
@@ -15,9 +39,9 @@ export class Login extends React.Component {
               <div className="log-in-form">
                 <div className="w-form">
 
-                  <form data-name="Email Form" id="email-form" name="email-form">
-                    <input className="form-input w-input" data-name="Email" id="Email-2" maxLength="256" name="Email" placeholder="Email" required="required" type="email"></input>
-                    <input className="form-input w-input" data-name="Password" id="Password" maxLength="256" name="Password" placeholder="Password" required="required" type="password"></input>
+                  <form data-name="Email Form" id="email-form" name="email-form" onSubmit={this.handleSubmit}>
+                    <input className="form-input w-input" data-name="Email" id="Email" maxLength="256" name="email" placeholder="Email" required="required" type="email"></input>
+                    <input className="form-input w-input" data-name="Password" id="Password" maxLength="256" name="password" placeholder="Password" required="required" type="password"></input>
                     <div className="remember-me w-checkbox">
                       <label className="w-form-label">
                         Remember me
@@ -26,24 +50,10 @@ export class Login extends React.Component {
                     </div>
                     <input className="button sign-in-button w-button" data-wait="Please wait..." type="submit" value="Sign in"></input>
                   </form>
-
-                  <div className="w-form-done">
-                    <div>Thank you! Your submission has been received!</div>
-                  </div>
-                  <div className="w-form-fail">
-                    <div>Oops! Something went wrong while submitting the form</div>
-                  </div>
                 </div>
               </div>
 
-              <div className="reset-log-in-links">
-                <a className="reset-link-block w-inline-block" href="#">
-                  <div className="reset-link">Reset Password</div>
-                </a>
-                <a className="reset-link-block w-inline-block" href="#">
-                  <div className="reset-link">Resend Verification Email</div>
-                </a>
-              </div>
+              {this.resetLinks()}
 
             </div>
           </div>
