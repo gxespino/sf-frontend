@@ -67,12 +67,18 @@ export class App extends React.Component {
     this.removeListener()
   }
 
+  handleLogout = (e) => {
+    e.preventDefault()
+    logout()
+    this.setState({authed: false})
+  }
+
   render() {
     return this.state.loading === true ? <h1>Loading</h1> : (
       <BrowserRouter>
         {({router}) => (
           <div>
-            <TopNav authed={this.state.authed} linkText='Login' linkAddr='/login' />
+            <TopNav authed={this.state.authed} handleLogout={this.handleLogout} />
 
             <div className="container">
               <div className="row">

@@ -13,11 +13,6 @@ export class Dashboard extends React.Component {
     return (
       <div>
         <h1>DASHBOARD</h1>
-        <TopNav linkText='Login' linkAddr='/login' />
-        <Header />
-        <Features />
-        <BottomNav />
-        <Promo />
         <Footer />
       </div>
     )

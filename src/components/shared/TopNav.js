@@ -1,7 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router'
 
+// Functions
+import { logout } from '../../helpers/auth'
+
 export const TopNav = (props) => {
+  const authLink = () => {
+    return props.authed === true ?
+      <button className="clear-button w-button" onClick={props.handleLogout.bind(this)}>Logout</button> :
+      <Link to='/login' className="clear-button w-button">Login</Link>
+  }
+
   return (
     <div>
       <div className="fixed-page-nav navigation w-clearfix">
@@ -12,10 +21,10 @@ export const TopNav = (props) => {
           </Link>
         </div>
         <div className="right-nav">
-          <Link to={ props.linkAddr } className="clear-button w-button">{ props.linkText }</Link>
+          {authLink()}
         </div>
         <div className="mobile-profile-nav right-nav">
-          <Link to={ props.linkAddr } className="clear-button w-button">{ props.linkText }</Link>
+          {authLink()}
         </div>
       </div>
     </div>
