@@ -74,7 +74,7 @@ export class App extends React.Component {
   }
 
   render() {
-    return this.state.loading === true ? <h1>Loading</h1> : (
+    return this.state.loading === true ? <h1>Loading...</h1> : (
       <BrowserRouter>
         {({router}) => (
           <div>
@@ -82,10 +82,6 @@ export class App extends React.Component {
 
             <div className="container">
               <div className="row">
-                <Match
-                  pattern='/'
-                  exactly component={Landing}
-                />
                 <MatchWhenUnauthed
                   authed={this.state.authed}
                   pattern='/login'
