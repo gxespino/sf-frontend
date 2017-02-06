@@ -38,6 +38,7 @@ export const SignedInNav = (props) => {
           <a className="nav-link" href="#">Richard 
             <span className="fa dropdown-caret"></span>
           </a>
+          <button className="clear-button w-button" onClick={props.handleLogout.bind(this)}>Logout</button>
         </div>
         <div className="mobile-profile-nav right-nav">
           <a className="profile-link-mobile w-inline-block" href="#">

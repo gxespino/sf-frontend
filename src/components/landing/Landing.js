@@ -16,7 +16,6 @@ export class Landing extends React.Component {
         <Features />
         <BottomNav />
         <Promo />
-        <Footer />
       </div>
     )
   }

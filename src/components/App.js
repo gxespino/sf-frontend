@@ -9,8 +9,9 @@ import { logout }       from '../helpers/auth'
 import { firebaseAuth } from '../config/constants'
 
 // Components
-import { Landing }   from './landing/Landing'
 import { TopNav }    from './shared/TopNav'
+import { Footer }    from './shared/Footer'
+import { Landing }   from './landing/Landing'
 import { Login }     from './Login'
 import { Signup }    from './Signup'
 import { Dashboard } from './protected/Dashboard'
@@ -100,6 +101,8 @@ export class App extends React.Component {
                 <Miss component={Landing} />
               </div>
             </div>
+
+            <Footer />
           </div>
         )}
       </BrowserRouter>
