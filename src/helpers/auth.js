@@ -1,24 +1,35 @@
-import { ref, firebaseAuth } from '../config/constants'
+import { base } from '../config/constants'
 
 export function auth (email, pw) {
-  return firebaseAuth().createUserWithEmailAndPassword(email, pw)
+  return base.createUser({
+    email: user.email,
+    uid: user.uid
+  }, {})
     .then(saveUser)
     .catch((error) => console.log('Oops', error))
 }
 
 export function logout () {
-  return firebaseAuth().signOut()
+  return base.unauth()
 }
 
 export function login (email, pw) {
-  return firebaseAuth().signInWithEmailAndPassword(email, pw)
+  return base.authWithPassword({
+    email: email,
+    password: pw
+  }, {})
 }
 
 export function saveUser (user) {
-  return ref.child(`users/${user.uid}/info`)
-    .set({
+  return base.post(`users/${user.uid}/info`, {
+    data: {
       email: user.email,
       uid: user.uid
-    })
-    .then(() => user)
+    },
+    then(error) {
+      if(!error) {
+        return user
+      }
+    }
+  })
 }

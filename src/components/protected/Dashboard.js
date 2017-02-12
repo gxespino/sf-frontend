@@ -9,7 +9,30 @@ import { BottomNav } from '../landing/BottomNav'
 import { ProjectList } from './project/ProjectList'
 import { ProjectNav }  from './project/ProjectNav'
 
+// Database
+import { base } from '../../config/constants'
+
 export class Dashboard extends React.Component {
+  constructor() {
+    super()
+
+    this.state = {}
+  }
+
+  componentWillMount() {
+    // This runs right before the app is rendered
+    this.ref = base.syncState(
+      'USER NAME', {
+        context: this,
+        state: 'USER PROJECTS'
+      }
+    )
+  }
+
+  componentWillUnmount() {
+    base.moveBinding(this.ref)
+  }
+
   render() {
     return (
       <div className="dashboard-section">

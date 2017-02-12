@@ -1,5 +1,5 @@
 /coverage
 /dist
 /node_modules
-/src/base.js
+/src/config/constants.js
 npm-debug.log*

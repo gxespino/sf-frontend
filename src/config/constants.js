@@ -1,12 +1,7 @@
-import firebase from 'firebase'
+import Rebase from 're-base'
 
-const config = {
-  apiKey: "AIzaSyDnVyIcqOXi1-TO_q_Sq1F5ghQhR4jSX-U",
-  authDomain: "smarterflips.firebaseapp.com",
-  databaseURL: "https://smarterflips.firebaseio.com",
-}
-
-firebase.initializeApp(config)
-
-export const ref = firebase.database().ref()
-export const firebaseAuth = firebase.auth
+export const base = Rebase.createClass({
+  apiKey: "AIzaSyDZYKod74Lx5kQmp4l8y2EP4gdaaSgYpkg",
+  authDomain: "https://smarterflips-23a04.firebaseio.com",
+  databaseURL: "https://smarterflips-23a04.firebaseio.com",
+})

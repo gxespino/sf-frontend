@@ -4,9 +4,9 @@ import React from 'react'
 import { BrowserRouter, Match, Miss, Link, Redirect } from 'react-router'
 
 // Auth
-import { render }       from 'react-dom'
-import { logout }       from '../helpers/auth'
-import { firebaseAuth } from '../config/constants'
+import { render } from 'react-dom'
+import { logout } from '../helpers/auth'
+import { base }   from '../config/constants'
 
 // Components
 import { TopNav }    from './shared/TopNav'
@@ -50,7 +50,7 @@ export class App extends React.Component {
   }
 
   componentDidMount() {
-    this.removeListener = firebaseAuth().onAuthStateChanged((user) => {
+    this.removeListener = base.onAuth((user) => {
       if (user) {
         this.setState({
           authed: true,
