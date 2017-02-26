@@ -1,35 +1,39 @@
 import { base } from '../config/constants'
 
-export function auth (email, pw) {
-  return base.createUser({
-    email: user.email,
-    uid: user.uid
-  }, {})
-    .then(saveUser)
-    .catch((error) => console.log('Oops', error))
-}
-
-export function logout () {
+export function logout() {
   return base.unauth()
 }
 
-export function login (email, pw) {
+export function login(email, pw) {
   return base.authWithPassword({
     email: email,
-    password: pw
+    password: pw,
   }, {})
 }
 
-export function saveUser (user) {
+export function saveUser(error, user, fullName, company) {
   return base.post(`users/${user.uid}/info`, {
     data: {
       email: user.email,
-      uid: user.uid
+      uid: user.uid,
+      fullName: fullName,
+      company: company,
     },
     then(error) {
       if(!error) {
         return user
       }
+    }
+  })
+}
+
+export function auth(email, password, fullName, company) {
+  return base.createUser({
+    email: email,
+    password: password,
+  }, function(error, user) {
+    if(!error) {
+      saveUser(error, user, fullName, company)
     }
   })
 }

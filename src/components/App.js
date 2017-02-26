@@ -54,6 +54,7 @@ export class App extends React.Component {
       if (user) {
         this.setState({
           authed: true,
+          user: user,
           loading: false,
         })
       } else {
@@ -79,7 +80,11 @@ export class App extends React.Component {
       <BrowserRouter>
         {({router}) => (
           <div>
-            <TopNav authed={this.state.authed} handleLogout={this.handleLogout} />
+            <TopNav
+              authed={this.state.authed}
+              handleLogout={this.handleLogout}
+              user={this.state.user}
+            />
 
             <div className="container">
               <div className="row">
@@ -109,11 +114,3 @@ export class App extends React.Component {
     )
   }
 }
-
-
-
-// Landing page when Auth   = Landing page with LOGOUT
-// Landing page when Unauth = Landing page with LOGIN / SIGNUP
-
-// Login/Signup when Auth   = Dashboard
-// Login/Signup when Unauth = Login/Signup pages respectively

@@ -128,12 +128,33 @@ a {
   font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
+  margin-left: 15px;
+}
+
+.sign-up-button {
+  border-style: solid;
+  border-color: #8effad;
+  border-radius: 2px;
+  background-color: #8e44ad;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  font-family: 'Proximanova regular 9d849023f31082d0ce3d3425bc5cc75d', sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-left: 15px;
 }
 
 .clear-button:hover {
   border-color: hsla(0, 0%, 43%, .8);
   background-color: #fbf5fd;
   color: #888;
+}
+
+.sign-up-button:hover {
+  background-color: #9b59b6;
 }
 
 .header {

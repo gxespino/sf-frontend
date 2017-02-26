@@ -25,7 +25,8 @@ export const SignedOutNav = (props) => {
     return (
       <div>
         <div className="right-nav">
-          <Link to='/login' className="clear-button w-button">Login</Link>
+          <Link to='/login' className="clear-button w-button">Log in</Link>
+          <Link to='/signup' className="sign-up-button w-button">Sign up</Link>
         </div>
         <div className="mobile-profile-nav right-nav">
           <Link to='/login' className="clear-button w-button">Login</Link>

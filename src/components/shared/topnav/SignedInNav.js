@@ -35,7 +35,7 @@ export const SignedInNav = (props) => {
     return (
       <div>
         <div className="right-nav">
-          <a className="nav-link" href="#">Richard 
+          <a className="nav-link" href="#">{props.user.email}
             <span className="fa dropdown-caret"></span>
           </a>
           <button className="clear-button w-button" onClick={props.handleLogout.bind(this)}>Logout</button>
