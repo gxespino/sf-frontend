@@ -10,8 +10,12 @@ import { logout } from '../../helpers/auth'
 
 export const TopNav = (props) => {
   return props.authed === true ? (
-    <SignedInNav authed={props.authed} handleLogout={props.handleLogout} />
+    <SignedInNav
+      authed={props.authed}
+      handleLogout={props.handleLogout}
+      user={props.user}
+    />
       ) : (
-    <SignedOutNav authed={props.authed} handleLogout={props.handleLogout} />
+    <SignedOutNav/>
   )
 }
