@@ -1,9 +1,8 @@
 import React from 'react'
 
-export class Features extends React.Component {
-  render() {
-    return (
-      <div>
+export const Features = () => {
+  return (
+    <div>
       <div className="feature-section">
         <div className="w-container">
           <div className="w-row">
@@ -55,6 +54,5 @@ export class Features extends React.Component {
         </div>
       </div>
     </div>
-    )
-  }
+  )
 }

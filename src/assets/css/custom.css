@@ -1,0 +1,77 @@
+/* Custom */
+
+input.input-box, textarea {
+  background: white;
+  font-size: 14px;
+  color: #d1d4d6;
+}
+
+.w-input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #d1d4d6;
+  font-size: 14px;
+}
+
+.w-input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #d1d4d6;
+  font-size: 14px;
+  opacity: 1;
+}
+
+.w-input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #d1d4d6;
+  font-size: 14px;
+  opacity: 1;
+}
+
+.w-input:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #d1d4d6;
+  font-size: 14px;
+}
+
+input.black-text, textarea {
+  color: #d1d4d6;
+  font-size: 14px;
+}
+.sign-up-button {
+  border-style: solid;
+  border-color: #8effad;
+  border-radius: 2px;
+  background-color: #8e44ad;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  font-family: 'Proximanova regular 9d849023f31082d0ce3d3425bc5cc75d', sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-left: 15px;
+}
+
+.sign-up-button:hover {
+  background-color: #9b59b6;
+}
+
+.info-price.incomplete {
+  color: #999;
+}
+
+.info-price.positive {
+  color: #53a533;
+}
+
+.info-price.analyzed {
+  color: #53a533;
+}
+
+.info-price.negative {
+  color: #a53333;
+}
+
+.info-price.sent-to-lender {
+  color: #53a533;
+}

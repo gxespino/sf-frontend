@@ -8,15 +8,13 @@ import { BottomNav } from './BottomNav'
 import { Promo }     from './Promo'
 import { Footer }    from '../shared/Footer'
 
-export class Landing extends React.Component {
-  render() {
-    return (
-      <div>
-        <Header />
-        <Features />
-        <BottomNav />
-        <Promo />
-      </div>
-    )
-  }
+export const Landing = () => {
+  return (
+    <div>
+      <Header />
+      <Features />
+      <BottomNav />
+      <Promo />
+    </div>
+  )
 }

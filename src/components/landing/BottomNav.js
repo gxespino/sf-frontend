@@ -1,7 +1,7 @@
 import React from 'react'
 
-export class BottomNav extends React.Component {
-  productLink(linkText) {
+export const BottomNav = () => {
+  const productLink = (linkText) => {
     return (
       <a className="product-selection-link-block w-inline-block" href="#">
         <div className="product-selection-text">{linkText}</div>
@@ -9,24 +9,22 @@ export class BottomNav extends React.Component {
     )
   }
 
-  render() {
-    return (
-      <div>
-        <div className="select-product">
-          <div className="w-container">
-            <h2>Simplify your flips with our</h2>
+  return (
+    <div>
+      <div className="select-product">
+        <div className="w-container">
+          <h2>Simplify your flips with our</h2>
 
-            <div className="product-selection-div">
-              {this.productLink("Rehab Analyzer")}
-              {this.productLink("Lender Presentations")}
-              {this.productLink("Repair Estimator")}
-              {this.productLink("Analysis Reports")}
-              {this.productLink("Rental Calculator")}
-              {this.productLink("Alternative Strategies")}
-            </div>
+          <div className="product-selection-div">
+            {productLink("Rehab Analyzer")}
+            {productLink("Lender Presentations")}
+            {productLink("Repair Estimator")}
+            {productLink("Analysis Reports")}
+            {productLink("Rental Calculator")}
+            {productLink("Alternative Strategies")}
           </div>
         </div>
       </div>
-    )
-  }
+    </div>
+  )
 }

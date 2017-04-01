@@ -8,6 +8,7 @@ import { App } from './components/App'
 import './assets/css/webflow.css'
 import './assets/css/App.css'
 import './assets/css/normalize.css'
+import './assets/css/custom.css'
 
 // Mounting Point
 render(<App />, document.querySelector('#main'));

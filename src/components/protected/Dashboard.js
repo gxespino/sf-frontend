@@ -12,11 +12,16 @@ import { ProjectNav }  from './project/ProjectNav'
 // Database
 import { base } from '../../config/constants'
 
+// Sample Projects
+import sampleProjects from './sampleProjects'
+
 export class Dashboard extends React.Component {
   constructor() {
     super()
 
-    this.state = {}
+    this.state = {
+      projects: sampleProjects
+    }
   }
 
   // componentWillMount() {
@@ -39,7 +44,7 @@ export class Dashboard extends React.Component {
         <div className="w-container">
 
           <ProjectNav />
-          <ProjectList />
+          <ProjectList projects={this.state.projects} />
 
         </div>
       </div>

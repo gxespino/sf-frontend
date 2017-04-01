@@ -1,23 +1,30 @@
 import React from 'react'
 
 // Components
-import { ProjectRowBase }       from './ProjectRowBase'
-import { ProjectRowAnalyzed }   from './ProjectRowAnalyzed'
-import { ProjectRowCompleted }  from './ProjectRowCompleted'
-import { ProjectRowIncomplete } from './ProjectRowIncomplete'
+import { ProjectRow }       from './ProjectRow'
 
-export class ProjectList extends React.Component {
-  render() {
+export const ProjectList = (props) => {
+  const list = () => {
     return (
-      <div className="project-list">
-        <ProjectRowAnalyzed />
-        <ProjectRowAnalyzed />
-        <ProjectRowIncomplete />
-        <ProjectRowCompleted />
-        <ProjectRowAnalyzed />
-        <ProjectRowCompleted />
-        <ProjectRowIncomplete />
+      <div>
+        {
+          Object
+          .keys(props.projects)
+          .map(
+            key =>
+            <ProjectRow
+              key={key}
+              projectDetails={props.projects[key]}
+            />
+          )
+        }
       </div>
     )
   }
+
+  return (
+    <div className="project-list">
+      {list()}
+    </div>
+  )
 }
