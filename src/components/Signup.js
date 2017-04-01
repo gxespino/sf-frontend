@@ -94,7 +94,7 @@ export class Signup extends React.Component {
             <div className="w-row">
               <div className="w-col w-col-6 w-col-stack">
                 <div className="auth-div sign-up">
-                  <div className="log-in-form">
+                  <div className="custom-form">
                     <div className="w-form">
 
                       {this.signupForm()}

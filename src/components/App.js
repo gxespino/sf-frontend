@@ -33,7 +33,7 @@ function MatchWhenUnauthed ({component: Component, authed, ...rest}) {
       {...rest}
       render={(props) => authed === false
         ? <Component {...props} />
-        : <Redirect to='/dashboard' />}
+        : <Redirect to='/investor/dashboard' />}
       />
   )
 }
@@ -100,7 +100,7 @@ export class App extends React.Component {
                 />
                 <MatchWhenAuthed
                   authed={this.state.authed}
-                  pattern='/dashboard'
+                  pattern='/investor/dashboard'
                   component={Dashboard}
                 />
                 <Miss component={Landing} />
