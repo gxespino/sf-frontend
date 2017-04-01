@@ -36,7 +36,7 @@ export class Login extends React.Component {
           <div className="w-container">
             <div className="auth-div">
               <h2>Log In</h2>
-              <div className="log-in-form">
+              <div className="custom-form">
                 <div className="w-form">
 
                   <form data-name="Email Form" id="email-form" name="email-form" onSubmit={this.handleSubmit}>

@@ -19,19 +19,19 @@ export class Dashboard extends React.Component {
     this.state = {}
   }
 
-  componentWillMount() {
-    // This runs right before the app is rendered
-    this.ref = base.syncState(
-      'USER NAME', {
-        context: this,
-        state: 'USER PROJECTS'
-      }
-    )
-  }
+  // componentWillMount() {
+  //   // This runs right before the app is rendered
+  //   this.ref = base.syncState(
+  //     'USER NAME', {
+  //       context: this,
+  //       state: 'USER PROJECTS'
+  //     }
+  //   )
+  // }
 
-  componentWillUnmount() {
-    base.moveBinding(this.ref)
-  }
+  // componentWillUnmount() {
+  //   base.moveBinding(this.ref)
+  // }
 
   render() {
     return (

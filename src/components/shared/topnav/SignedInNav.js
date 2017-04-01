@@ -24,7 +24,7 @@ export const SignedInNav = (props) => {
   const renderNavLinks = () => {
     return (
       <div className="dashboard-left-nav-links">
-        <a className="nav-link w--current" href="/dashboard">projects</a>
+        <a className="nav-link w--current" href="/investor/dashboard">projects</a>
         <a className="nav-link" href="/">reports</a>
         <a className="nav-link" href="/">marketing</a>
       </div>
