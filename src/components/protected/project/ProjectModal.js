@@ -5,7 +5,7 @@ export const ProjectModal = (props) => {
     <div>
       <div className="modal-backdrop">
         <div className="modal w-clearfix">
-          {this.props.children}
+          {props.children}
         </div>
       </div>
     </div>
