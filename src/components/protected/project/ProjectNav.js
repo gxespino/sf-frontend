@@ -27,14 +27,14 @@ export class ProjectNav extends React.Component {
           </button>
 
           <ProjectModal isOpen={this.state.isModalOpen}>
-            <div className="close-button">
-              <div className="text-block" onClick={() => this.closeModal()}>X</div>
+            <div className="modal-header">
+              <div className="close-button">
+                <div className="text-block" onClick={() => this.closeModal()}>X</div>
+              </div>
+              <div className="div-block modal-title">
+                <h2 className="heading">Create a Project</h2>
+              </div>
             </div>
-
-            <div className="div-block">
-              <h2 className="heading">Create a Project</h2>
-            </div>
-
             <div className="custom-form">
               <div className="w-form">
                 <form data-name="Email Form" id="email-form" name="email-form">

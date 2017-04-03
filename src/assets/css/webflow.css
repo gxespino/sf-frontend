@@ -352,10 +352,10 @@ textarea.w-select {
 .w-container:after {
   clear: both;
 }
-.w-container .w-row {
-  margin-left: -10px;
-  margin-right: -10px;
-}
+/* .w-container .w-row { */
+/*   margin-left: -10px; */
+/*   margin-right: -10px; */
+/* } */
 .w-row:before,
 .w-row:after {
   content: " ";
