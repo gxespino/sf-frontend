@@ -1,8 +1,6 @@
-# Smarter Flips - Frontend
+# Smarter Flips - SPA
 
 Smarter Flips is a SaaS solution for Real Estate Investors.
-This specific repo is the React frontend powering the Rails 5 API.
-The Rails API is located [here](https://github.com/gxespino/sf-api).
 
 ## Development
 
