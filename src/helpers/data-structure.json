@@ -1,0 +1,53 @@
+{
+  "users" : {
+    "user-1-uid" : {
+      "company" : "Flip Co, Inc",
+      "email" : "user1@gmail.com",
+      "fullName" : "Bob Smith",
+      "uid" : "user-1-uid"
+    },
+    "user-2-uid" : {
+      "company" : "Fresh Homes, LLC",
+      "email" : "user2@gmail.com",
+      "fullName" : "Sarah Jane",
+      "uid" : "user-2-uid"
+    }
+  },
+  "projects": {
+    "user-1-uid": {
+      "project-name-1": {
+        "streetAddress": "123 Main St.",
+        "city": "Arlington",
+        "state": "Va",
+        "bedrooms": 3,
+        "baths": 1.5,
+        "squareFeet": 1200,
+        "yearBuilt": 1950
+      },
+      "project-name-2": { ... }
+    },
+    "user-2-uid": {
+      "project-name-1": { ... },
+      "project-name-2": { ... }
+    }
+  },
+  "analysis": {
+    "user-1-uid": {
+      "project-name-1": {
+        "LTV": 35,
+        "ARV": 260000,
+        "percentOfARV": 35,
+        "totalAllInCost": 205950,
+        "projectedResalePrice": 275950,
+        "projectedProfit": 70000,
+        "cashROI": 78,
+        "annualizedROI": 125.55
+      },
+      "project-name-2": { ... }
+    },
+    "user-2-uid": {
+      "project-name-1": { ... },
+      "project-name-2": { ... }
+    }
+  }
+}

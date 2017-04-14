@@ -16,11 +16,12 @@ import { base } from '../../config/constants'
 import sampleProjects from './sampleProjects'
 
 export class Dashboard extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = {
-      projects: sampleProjects
+      user: this.props.user,
+      projects: sampleProjects,
     }
   }
 
@@ -39,6 +40,8 @@ export class Dashboard extends React.Component {
   // }
 
   render() {
+    console.log(this.state.user)
+
     return (
       <div className="dashboard-section">
         <div className="w-container">

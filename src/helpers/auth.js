@@ -12,7 +12,7 @@ export function login(email, pw) {
 }
 
 export function saveUser(error, user, fullName, company) {
-  return base.post(`users/${user.uid}/info`, {
+  return base.post(`users/${user.uid}`, {
     data: {
       email: user.email,
       uid: user.uid,
