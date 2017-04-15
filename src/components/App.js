@@ -21,7 +21,7 @@ function MatchWhenAuthed ({component: Component, authed, ...rest}) {
     <Match
       {...rest}
       render={(props) => authed === true
-        ? <Component {...props} />
+        ? <Component {...rest} />
         : <Redirect to={{pathname: '/login', state: {from: props.location}}} />}
       />
   )
@@ -59,7 +59,7 @@ export class App extends React.Component {
         })
       } else {
         this.setState({
-          loading: false
+          loading: true,
         })
       }
     })
@@ -100,6 +100,7 @@ export class App extends React.Component {
                 />
                 <MatchWhenAuthed
                   authed={this.state.authed}
+                  user={this.state.user}
                   pattern='/investor/dashboard'
                   component={Dashboard}
                 />

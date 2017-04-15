@@ -16,26 +16,22 @@ import { base } from '../../config/constants'
 import sampleProjects from './sampleProjects'
 
 export class Dashboard extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = {
-      projects: sampleProjects
+      user: this.props.user,
+      projects: {},
     }
   }
 
   // componentWillMount() {
-  //   // This runs right before the app is rendered
-  //   this.ref = base.syncState(
-  //     'USER NAME', {
-  //       context: this,
-  //       state: 'USER PROJECTS'
-  //     }
-  //   )
-  // }
+  //   const endpoint = `projects/${this.state.user.uid}`
 
-  // componentWillUnmount() {
-  //   base.moveBinding(this.ref)
+  //   base.syncState(endpoint, {
+  //     context: this,
+  //     state: 'projects'
+  //   });
   // }
 
   render() {
@@ -43,7 +39,7 @@ export class Dashboard extends React.Component {
       <div className="dashboard-section">
         <div className="w-container">
 
-          <ProjectNav />
+          <ProjectNav user={this.props.user} />
           <ProjectList projects={this.state.projects} />
 
         </div>
