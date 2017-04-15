@@ -5,7 +5,7 @@ import { TopNav } from './shared/TopNav'
 import { Footer } from './shared/Footer'
 
 // Auth
-import { auth, updateUser } from '../helpers/auth'
+import { auth } from '../helpers/auth'
 
 export class Signup extends React.Component {
   handleSubmit = (e) => {

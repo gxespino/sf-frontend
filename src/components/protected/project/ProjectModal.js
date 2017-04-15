@@ -1,7 +1,28 @@
 import React from 'react'
 
+// Functions
+import { saveProject } from '../../../helpers/projects'
+
 export const ProjectModal = (props) => {
-  const renderHeader = (props) => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    const project = {
+     name:          e.currentTarget.name.value,
+     streetAddress: e.currentTarget.streetAddress.value,
+     city:          e.currentTarget.city.value,
+     state:         e.currentTarget.state.value,
+     bedrooms:      e.currentTarget.bedrooms.value,
+     baths:         e.currentTarget.baths.value,
+     squareFeet:    e.currentTarget.squareFeet.value,
+     yearBuilt:     e.currentTarget.yearBuilt.value,
+    }
+
+    saveProject(props.user, project)
+    props.closeModal()
+  }
+
+  const renderHeader = () => {
     return (
       <div className="modal-header">
         <div className="close-button">
@@ -32,18 +53,18 @@ export const ProjectModal = (props) => {
 
           <div className="custom-form">
             <div className="w-form">
-              <form data-name="Email Form" id="email-form" name="email-form">
+              <form data-name="Email Form" id="email-form" name="email-form" onSubmit={handleSubmit}>
 
-                {renderInputGroup("New Project Name", "Project Name", "Project-Name", "Main Street Project", true)}
-                {renderInputGroup("Street Address", "Street Address", "Street-Address", "1234 Main Street", true)}
+                {renderInputGroup("New Project Name", "Project Name", "name", "Main Street Project", true)}
+                {renderInputGroup("Street Address", "Street Address", "streetAddress", "1234 Main Street", true)}
 
                 <div className="double-input-group">
                   <div className="w-row">
                     <div className="input-column-left w-col w-col-6">
-                      {renderInputGroup("City", "City", "City", "Springfield", true)}
+                      {renderInputGroup("City", "City", "city", "Springfield", true)}
                     </div>
                     <div className="input-column-right w-col w-col-6">
-                      {renderInputGroup("State", "State", "State", "Virginia", true)}
+                      {renderInputGroup("State", "State", "state", "Virginia", true)}
                     </div>
                   </div>
                 </div>
@@ -51,10 +72,10 @@ export const ProjectModal = (props) => {
                 <div className="double-input-group">
                   <div className="w-row">
                     <div className="input-column-left w-col w-col-6">
-                      {renderInputGroup("Bedrooms", "Bedrooms", "Bedrooms", "3", true)}
+                      {renderInputGroup("Bedrooms", "Bedrooms", "bedrooms", "3", true)}
                     </div>
                     <div className="input-column-right w-col w-col-6">
-                      {renderInputGroup("Baths", "Baths", "Baths", "2", true)}
+                      {renderInputGroup("Baths", "Baths", "baths", "2", true)}
                     </div>
                   </div>
                 </div>
@@ -62,17 +83,15 @@ export const ProjectModal = (props) => {
                 <div className="double-input-group">
                   <div className="w-row">
                     <div className="input-column-left w-col w-col-6">
-                      {renderInputGroup("Square Feet", "Square Feet", "Square-Feet", "1,200", true)}
+                      {renderInputGroup("Square Feet", "Square Feet", "squareFeet", "1,200", true)}
                     </div>
                     <div className="input-column-right w-col w-col-6">
-                      {renderInputGroup("Year", "Year", "Year", "2010", true)}
+                      {renderInputGroup("Year Built", "Year", "yearBuilt", "2010", true)}
                     </div>
                   </div>
                 </div>
 
-                <button className="button sign-in-button w-button" onClick={() => props.closeModal()}>
-                  Create Project
-                </button>
+                <input className="button sign-in-button w-button" type="submit" value="Create Project"></input>
 
               </form>
             </div>

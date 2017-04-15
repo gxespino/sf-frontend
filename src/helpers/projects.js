@@ -1,10 +1,10 @@
 import { base } from '../config/constants'
 
 export function saveProject(user, project) {
-  return base.post(`projects/${user.uid}`, {
+  return base.post(`projects/${user.uid}/${project.name}`, {
     data: {
       streetAddress: project.streetAddress,
-      city:          project.state,
+      city:          project.city,
       state:         project.state,
       bedrooms:      project.bedrooms,
       baths:         project.baths,

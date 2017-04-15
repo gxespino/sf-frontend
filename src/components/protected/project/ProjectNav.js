@@ -27,6 +27,7 @@ export class ProjectNav extends React.Component {
           </button>
 
           <ProjectModal
+            user={this.props.user}
             isOpen={this.state.isModalOpen}
             closeModal={() => this.closeModal()}
           />

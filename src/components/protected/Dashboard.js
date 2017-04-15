@@ -25,23 +25,21 @@ export class Dashboard extends React.Component {
     }
   }
 
-  componentWillMount() {
-    const endpoint = `projects/${this.state.user.uid}`
+  // componentWillMount() {
+  //   const endpoint = `projects/${this.state.user.uid}`
 
-    base.syncState(endpoint, {
-      context: this,
-      state: 'projects'
-    });
-  }
+  //   base.syncState(endpoint, {
+  //     context: this,
+  //     state: 'projects'
+  //   });
+  // }
 
   render() {
-    console.log(this.state.user)
-
     return (
       <div className="dashboard-section">
         <div className="w-container">
 
-          <ProjectNav />
+          <ProjectNav user={this.props.user} />
           <ProjectList projects={this.state.projects} />
 
         </div>
